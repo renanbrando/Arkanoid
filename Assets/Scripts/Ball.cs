@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour {
 
 
 	void OnCollisionEnter2D(Collision2D col) {
-		// Hit the Racket?
+		// Hit the Paddle?
 		if (col.gameObject.name == "paddle") {
 			// Calculate hit Factor
 			float x=hitFactor(transform.position,
@@ -43,7 +43,7 @@ public class Ball : MonoBehaviour {
 		// ascii art:
 		//
 		// 1  -0.5  0  0.5   1  <- x value
-		// ===================  <- racket
+		// ===================  <- paddle
 		//
 		return (ballPos.x - racketPos.x) / racketWidth;
 	}
