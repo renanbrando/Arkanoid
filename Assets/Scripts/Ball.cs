@@ -5,15 +5,19 @@ using UnityEngine;
 public class Ball : MonoBehaviour {
 	// Movement Speed
 	public float speed = 100.0f;
+	public GameObject ball;
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
+		GetComponent<Rigidbody2D>().velocity = Vector2.down * speed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (transform.position.y < -130) {
+			Instantiate(ball, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
+			Destroy(gameObject);
+		}
 	}
 
 
