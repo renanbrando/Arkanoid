@@ -1,14 +1,14 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Block.cs">
+﻿<Properties StartupConfiguration="{B2C7635B-D429-0DB0-834E-52799E6FB92B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Block.cs">
     <Files>
-      <File FileName="Assets\Scripts\Paddle.cs" Line="21" Column="41" />
-      <File FileName="Assets\Scripts\Ball.cs" Line="37" Column="17" />
-      <File FileName="Assets\Scripts\Block.cs" Line="17" Column="2" />
+      <File FileName="Assets/Scripts/Block.cs" Line="7" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Arkanoid PreferredExecutionTarget="Unity.Editor" />
 </Properties>
