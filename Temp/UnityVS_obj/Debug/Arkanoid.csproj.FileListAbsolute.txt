@@ -1,0 +1,1 @@
+/Users/renanribeirobrando/Projects/unity/Arkanoid/Temp/UnityVS_obj/Debug/Arkanoid.csproj.CoreCompileInputs.cache

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour {
 	// Movement Speed
 	public float speed = 100.0f;
 	public GameObject ball;
+    public AudioSource sound;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +17,8 @@ public class Ball : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (transform.position.y < -130) {
-			Instantiate(ball, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
+            SceneManager.LoadScene("Menu");
+			//Instantiate(ball, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
 			Destroy(gameObject);
 		}
 	}
@@ -24,8 +27,11 @@ public class Ball : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col) {
 		// Hit the Paddle?
 		if (col.gameObject.name == "paddle") {
+            // Plsy sound 
+            sound.Play();
+
 			// Calculate hit Factor
-			float x=hitFactor(transform.position,
+			float x = hitFactor(transform.position,
 				col.transform.position,
 				col.collider.bounds.size.x);
 
@@ -33,7 +39,7 @@ public class Ball : MonoBehaviour {
 			Vector2 dir = new Vector2(x, 1).normalized;
 
 			// Set Velocity with dir * speed
-			GetComponent<Rigidbody2D>().velocity = dir * speed;
+            GetComponent<Rigidbody2D>().velocity = dir * speed;
 		}
 	}
 

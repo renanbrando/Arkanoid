@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class Block : MonoBehaviour {
 
     public Text score;
+    public AudioSource sound;
 
 	// Use this for initialization
 	void Start () {
+
 
 	}
 
@@ -19,7 +21,10 @@ public class Block : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collisionInfo) {
         // Destroy the whole Block 
+        sound.Play();
+
         score.text = (int.Parse(score.text) + 1).ToString();
+
 		Destroy(gameObject);
 	}
 }
