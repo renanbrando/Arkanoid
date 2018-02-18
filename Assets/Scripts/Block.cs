@@ -23,6 +23,7 @@ public class Block : MonoBehaviour {
         // Destroy the whole Block 
         sound.Play();
 
+        Game.blocks -= 1;
         score.text = (int.Parse(score.text) + 1).ToString();
 
 		Destroy(gameObject);

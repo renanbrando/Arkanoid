@@ -16,11 +16,7 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < -130) {
-            SceneManager.LoadScene("Menu");
-			//Instantiate(ball, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
-			Destroy(gameObject);
-		}
+	
 	}
 
 
@@ -40,7 +36,11 @@ public class Ball : MonoBehaviour {
 
 			// Set Velocity with dir * speed
             GetComponent<Rigidbody2D>().velocity = dir * speed;
-		}
+        } else if (col.gameObject.name == "DeadZone"){
+            SceneManager.LoadScene("Menu");
+            //Instantiate(ball, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
+            Destroy(gameObject);
+        }
 	}
 
 

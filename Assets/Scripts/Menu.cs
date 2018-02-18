@@ -7,7 +7,6 @@ public class Menu : MonoBehaviour {
 
     public Canvas mainMenu;
     public Canvas optionsMenu;
-    public static bool gameSound;
     public AudioSource music;
 
     private void Awake()
@@ -37,7 +36,7 @@ public class Menu : MonoBehaviour {
 
     public void Sound()
     {
-        if(gameSound){
+        if(PlayerPrefs.GetInt("gameSound", 1) == 1){
             stopMusic();
 
         } else {
@@ -46,13 +45,13 @@ public class Menu : MonoBehaviour {
     }
 
     void playMusic(){
-        Menu.gameSound = true;
+        PlayerPrefs.SetInt("gameSound", 1);
         music.Play();
         music.loop = true;
     }
 
     void stopMusic(){
-        Menu.gameSound = false;
+        PlayerPrefs.SetInt("gameSound", 0);
         music.Pause();
     }
 

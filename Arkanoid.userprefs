@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{B2C7635B-D429-0DB0-834E-52799E6FB92B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Paddle.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game.cs">
     <Files>
       <File FileName="Assets/Scripts/Block.cs" Line="26" Column="60" />
       <File FileName="Assets/Scripts/Ball.cs" Line="30" Column="13" />
-      <File FileName="Assets/Scripts/Paddle.cs" Line="22" Column="45" />
+      <File FileName="Assets/Scripts/Paddle.cs" Line="22" Column="44" />
       <File FileName="Assets/Scripts/Menu.cs" Line="29" Column="12" />
       <File FileName="Assets/Scripts/Game.cs" Line="6" Column="36" />
     </Files>
